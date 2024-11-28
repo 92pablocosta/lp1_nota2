@@ -1,4 +1,4 @@
-package models;
+package models.funcionarios;
 
 public class Seguranca extends Funcionario {
     public Seguranca(String nome, String cpf, int id) {

@@ -1,4 +1,4 @@
-package models;
+package models.participantes;
 
 public class Participante {
 

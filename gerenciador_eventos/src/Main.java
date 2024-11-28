@@ -1,11 +1,13 @@
-import javafx.application.Application;
-import javafx.scene.Scene;
-import javafx.scene.control.Label;
-import javafx.stage.Stage;
+import models.funcionarios.Funcionario;
+import models.eventos.Evento;
+import models.participantes.Participante;
+import java.util.Scanner;
+
 
 public class Main {
     public static void main(String[] args) {
 
+        Scanner sc = new Scanner(System.in);
 
 
     }

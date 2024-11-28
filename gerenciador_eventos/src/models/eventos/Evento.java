@@ -1,4 +1,4 @@
-package models;
+package models.eventos;
 
 public class Evento {
     String nome;
@@ -42,5 +42,5 @@ public class Evento {
         return local;
     }
 
-
+ 
 }

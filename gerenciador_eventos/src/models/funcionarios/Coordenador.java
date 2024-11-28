@@ -1,4 +1,4 @@
-package models;
+package models.funcionarios;
 
 public class Coordenador extends Funcionario {
 
