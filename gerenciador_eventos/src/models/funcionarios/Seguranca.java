@@ -1,6 +1,6 @@
 package models.funcionarios;
 
-public class Seguranca extends Funcionario {
+public final class Seguranca extends Funcionario {
     public Seguranca(String nome, String cpf, int id) {
         super(nome, cpf, id);
     }

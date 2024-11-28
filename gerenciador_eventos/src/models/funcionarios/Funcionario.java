@@ -1,41 +1,14 @@
 package models.funcionarios;
+import models.Pessoa;
 
-public abstract class Funcionario {
+public class Funcionario extends Pessoa {
 
-    private String nome;
-    private String cpf;
-    private int id;
+    int idFuncionario;
 
-    public Funcionario(String nome, String cpf, int id) {
-        this.nome = nome;
-        this.cpf = cpf;
-        this.id = id;
+    public Funcionario(String nome, String cpf, String endereco, String telefone, int idFuncionario) {
+        super(nome, cpf, endereco, telefone);
+        this.idFuncionario = idFuncionario;
     }
-
-    // set
-    public void setNome(String nome) {
-        this.nome = nome;
-    }
-    public void setcpf(String cpf) {
-        this.cpf = cpf;
-    }
-    public void setId(int id) {
-        this.id = id;
-    }
-
-    // get
-    public String getNome() {
-        return nome;
-    }
-    public String getCpf() {
-        return cpf;
-    }
-    public int getId() {
-        return id;
-    }
-
-    // metodos
-    public abstract void funcao();
 
 
 

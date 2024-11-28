@@ -1,6 +1,6 @@
 package models.funcionarios;
 
-public class Coordenador extends Funcionario {
+public final class Coordenador extends Funcionario {
 
     public Coordenador(String nome, String cpf, int id) {
         super(nome, cpf, id);

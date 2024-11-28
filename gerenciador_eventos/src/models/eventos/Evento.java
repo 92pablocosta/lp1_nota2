@@ -42,5 +42,13 @@ public class Evento {
         return local;
     }
 
+    public void exibirInfo() {
+        System.out.println("Evento: " + nome);
+        System.out.println("Descricao: " + descricao);
+        System.out.println("Data: " + data);
+        System.out.println("Local: " + local);
+    }
+
+
  
 }
