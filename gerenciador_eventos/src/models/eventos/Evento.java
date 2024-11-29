@@ -1,10 +1,15 @@
 package models.eventos;
 
+import models.Pessoa;
+import java.util.ArrayList;
+import java.util.List;
+
 public class Evento {
-    String nome;
-    String descricao;
-    String data;
-    String local;
+    private String nome;
+    private String descricao;
+    private String data;
+    private String local;
+    private List<Pessoa> pessoas = new ArrayList<>();
 
 
     public Evento(String nome, String descricao, String data, String local) {
@@ -42,6 +47,8 @@ public class Evento {
         return local;
     }
 
+    //metodos
+
     public void exibirInfo() {
         System.out.println("Evento: " + nome);
         System.out.println("Descricao: " + descricao);
@@ -49,6 +56,22 @@ public class Evento {
         System.out.println("Local: " + local);
     }
 
+    public void adicionarPessoa(Pessoa pessoa) {
+        pessoas.add(pessoa);
+    }
 
- 
+    public void fazerCheckin(String cpf) {
+        for (Pessoa pessoa : pessoas) {
+            if (pessoa.getCpf().equals(cpf)) {
+                pessoa.fazerCheckin();
+                System.out.println("Check-in de " + pessoa.getNome() + " REALIZADO com sucesso!");
+            }
+            else {
+                System.out.println("CPF não encontrado.");
+            }
+        }
+    }
+
+
+
 }

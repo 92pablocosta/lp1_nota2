@@ -5,12 +5,14 @@ public abstract class Pessoa {
     private String cpf;
     private String email;
     private String telefone;
+    private boolean checkin;
 
-    public Pessoa(String nome, String cpf, String email, String telefone) {
+    public Pessoa(String nome, String cpf, String email, String telefone, boolean checkin) {
         this.nome = nome;
         this.cpf = cpf;
         this.email = email;
         this.telefone = telefone;
+        this.checkin = checkin;
     }
 
     // set
@@ -40,7 +42,14 @@ public abstract class Pessoa {
     public String getTelefone() {
         return telefone;
     }
+    public boolean isCheckin() {
+        return checkin;
+    }
 
+    //metodos
+    public void fazerCheckin() {
+        this.checkin = true;
+    }
 
 
 }

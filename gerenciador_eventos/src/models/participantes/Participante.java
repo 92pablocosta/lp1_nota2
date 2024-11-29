@@ -1,23 +1,24 @@
 package models.participantes;
+
 import models.Pessoa;
+import enums.TipoIngresso;
 
 public class Participante extends Pessoa {
 
-    private String tipo_igresso;
+    private TipoIngresso tipoIngresso;
 
-    public Participante(String nome, String cpf, String email, String telefone, String tipo_igresso) {
-        super(nome, cpf, email, telefone);
-        this.tipo_igresso = tipo_igresso;
+    public Participante(String nome, String cpf, String email, String telefone, boolean checkin) {
+        super(nome, cpf, email, telefone, checkin);
     }
 
     //set
-    public void setTipo_igresso(String tipo_igresso) {
-        this.tipo_igresso = tipo_igresso;
+    public void setTipo_igresso(TipoIngresso tipoIngresso) {
+        this.tipoIngresso = tipoIngresso;
     }
 
     //get
     public String getTipo_igresso() {
-        return tipo_igresso;
+        return tipoIngresso.toString();
     }
 
 
