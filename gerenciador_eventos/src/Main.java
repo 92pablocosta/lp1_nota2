@@ -1,24 +1,22 @@
 import java.util.Scanner;
 
+import models.funcionarios.Funcionario;
+import models.eventos.Evento;
+import models.participantes.Participante;
+
 public class Main {
     public static void main(String[] args) {
 
         Scanner sc = new Scanner(System.in);
 
-        System.out.println("Bem vindo ao Evento ");
-        System.out.println("Participante ou vai trabalhar no evento?");
-        System.out.println("1 - Participante");
-        System.out.println("2 - Funcionario");
-        int op = sc.nextInt();
+        Evento evento = new Evento("Uniesp Inova", "Feira de tecnologia", "29/11/2024", "Uniesp");
+        Participante p1 = new Participante("Pablo", "12345678910", "pablo@123.com", "9911112222", false);
 
-        switch (op) {
-            case 1:
-                System.out.println("Informe o CPF do participante (sem espaço ou ponto): ");
-                String cpfParticipante = sc.next();
+        System.out.println("Bem vindo ao Evento " + evento.getNome());
+        System.out.println("Digite o CPF do participante: ");
+        String cpf = sc.nextLine();
 
 
-
-        }
 
     }
 }

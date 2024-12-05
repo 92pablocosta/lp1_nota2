@@ -61,16 +61,20 @@ public class Evento {
     }
 
     public void fazerCheckin(String cpf) {
+        boolean encontrado = false;
         for (Pessoa pessoa : pessoas) {
             if (pessoa.getCpf().equals(cpf)) {
                 pessoa.fazerCheckin();
                 System.out.println("Check-in de " + pessoa.getNome() + " REALIZADO com sucesso!");
-            }
-            else {
-                System.out.println("CPF não encontrado.");
+                encontrado = true;
+                break;
             }
         }
+        if (!encontrado) {
+            System.out.println("CPF não encontrado.");
+        }
     }
+
 
 
 

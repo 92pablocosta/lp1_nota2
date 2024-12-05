@@ -3,7 +3,7 @@ package models.participantes;
 import models.Pessoa;
 import enums.TipoIngresso;
 
-public class Participante extends Pessoa {
+public final class Participante extends Pessoa {
 
     private TipoIngresso tipoIngresso;
 
@@ -19,6 +19,20 @@ public class Participante extends Pessoa {
     //get
     public String getTipo_igresso() {
         return tipoIngresso.toString();
+    }
+
+    // metodos
+    @Override
+    public String getTipoPessoa() {
+        return "Participante";
+    }
+
+    @Override
+    public void exibirDetalhes() {
+        System.out.println("Tipo: Participante");
+        System.out.println("Nome: " + getNome());
+        System.out.println("CPF: " + getCpf());
+        System.out.println("Tipo de Ingresso: " + tipoIngresso);
     }
 
 

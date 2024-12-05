@@ -47,9 +47,12 @@ public abstract class Pessoa {
     }
 
     //metodos
+
     public void fazerCheckin() {
         this.checkin = true;
     }
+    public abstract String getTipoPessoa();
+    public abstract void exibirDetalhes();
 
 
 }
