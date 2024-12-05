@@ -51,8 +51,7 @@ public abstract class Pessoa {
     public void fazerCheckin() {
         this.checkin = true;
     }
-    public abstract String getTipoPessoa();
-    public abstract void exibirDetalhes();
+
 
 
 }

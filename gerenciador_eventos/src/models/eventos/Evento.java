@@ -1,8 +1,11 @@
 package models.eventos;
 
-import models.Pessoa;
 import java.util.ArrayList;
 import java.util.List;
+
+import models.*;
+import service.*;
+import enums.*;
 
 public class Evento {
     private String nome;
@@ -75,7 +78,23 @@ public class Evento {
         }
     }
 
-
+    public boolean buscarPorCpf(String cpf) {
+        boolean encontrado = false;
+        for (Pessoa pessoa : pessoas) {
+            if (pessoa.getCpf().equals(cpf)) {
+                System.out.println("CPF encontrado!");
+                System.out.println("Nome: " + pessoa.getNome());
+                System.out.println("CPF: " + pessoa.getCpf());
+                System.out.println("E-mail: " + pessoa.getEmail());
+                encontrado = true;
+                break;
+            }
+        }
+        if (!encontrado) {
+            System.out.println("CPF não encontrado.");
+        }
+        return encontrado;
+    }
 
 
 }

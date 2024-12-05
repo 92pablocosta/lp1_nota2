@@ -1,12 +1,14 @@
 package models.funcionarios;
 import models.Pessoa;
 import enums.Funcao;
+import enums.*;
+import service.PessoaInterface;
 
-public class Funcionario extends Pessoa {
+public class Funcionario extends Pessoa implements PessoaInterface {
 
     private Funcao funcao;
 
-    public Funcionario(String nome, String cpf, String endereco, String telefone, boolean checkin, int idFuncionario, Funcao funcao) {
+    public Funcionario(String nome, String cpf, String endereco, String telefone, boolean checkin, Funcao funcao) {
         super(nome, cpf, endereco, telefone, checkin);
         this.funcao = funcao;
     }
